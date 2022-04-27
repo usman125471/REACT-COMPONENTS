@@ -1,23 +1,56 @@
 import React from "react";
-import CreateRoot from "react-dom";
+import ReactDom from "react-dom";
+import "./index.css";
 
 //////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\
-
-function Greetings() {
+function BookList() {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-const Person = () => <h1>Usman!</h1>;
-const Message = () => (
-  <h2>
-    <p>learning react. </p>
-  </h2>
-);
+const Book = () => {
+  return (
+    <article className="book">
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/71VZGrjyqCL._AC_UL302_SR302,200_.jpg"
+        alt=""
+      />
+      <h1>Title: The Bad Guys</h1>
+      <h4>Arthure: Aaron Blabey </h4>
+    </article>
+  );
+};
+
+///////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// const Title = () => {
+//   return (
+//     <section>
+//       <h1>Title: The Bad Guys</h1>
+//     </section>
+//   );
+// };
+// const Image = () => (
+//   <img
+//     src="https://images-na.ssl-images-amazon.com/images/I/71VZGrjyqCL._AC_UL302_SR302,200_.jpg"
+//     alt=""
+//   />
+// );
+
+// const Author = () => {
+//   return <h4>Arthure: Aaron Blabey </h4>;
+// };
 
 /////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -52,4 +85,4 @@ const Message = () => (
 //   return React.createElement("div", {}, React.createElement('h1',{},'Web Devolper!' ));
 //  }
 
-CreateRoot.render(<Greetings />, document.getElementById("root"));
+ReactDom.render(<BookList />, document.getElementById("root"));
