@@ -1,7 +1,9 @@
 * {
-  margin: auto;
-  padding: auto;
-  box-sizing: auto;
+  /* margin: auto; */
+  /* padding: auto; */
+  margin: 0.3rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,20 +14,20 @@ body {
 
 .booklist {
   width: 90vw;
-  max-width: 1170px;
-  max-width: 5rem auto;
+  max-width: 117px;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .book {
-  padding: 1rem 2rem;
+  padding: auto;
+  /* padding: 0rem 0rem; */
   border-radius: 0.4rem;
   background-color: aqua;
   border-inline-color: black;
@@ -44,4 +46,12 @@ body {
   margin-top: 0.1rem;
   color: blue;
   font-size: 0.7rem;
+}
+
+.btn-ex{
+  padding: 0.2rem;
+  border-color: green;
+  border-width: 0.3rem;
+  border-radius: 0.3rem;
+  border-style: inset;
 }
